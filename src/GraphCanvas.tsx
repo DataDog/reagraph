@@ -113,10 +113,6 @@ export const GraphCanvas: FC<GraphCanvasProps & { ref?: Ref<GraphCanvasRef> }> =
       // Defaults to pass to the store
       const { selections, actives, collapsedNodeIds } = rest;
 
-      // It's pretty hard to get good animation performance with large n of edges/nodes
-      const finalAnimated =
-        edges.length + nodes.length > 400 ? false : animated;
-
       // NOTE: The legacy/linear/flat flags are for color issues
       // Reference: https://github.com/protectwise/troika/discussions/213#discussioncomment-3086666
       return (
@@ -159,7 +155,7 @@ export const GraphCanvas: FC<GraphCanvasProps & { ref?: Ref<GraphCanvasRef> }> =
                       ref={rendererRef as any}
                       theme={theme}
                       disabled={disabled}
-                      animated={finalAnimated}
+                      animated={animated}
                       edges={edges}
                       nodes={nodes}
                       {...rest}

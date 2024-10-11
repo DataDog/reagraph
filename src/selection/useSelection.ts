@@ -149,6 +149,11 @@ export interface SelectionResult {
    * When node lost pointer over.
    */
   onNodePointerOut?: (node: GraphNode) => void;
+
+  /**
+   * The root node selected.
+   */
+  rootNodeSelected?: string;
 }
 
 export const useSelection = ({
@@ -170,6 +175,7 @@ export const useSelection = ({
     useState<string[]>(selections);
   const [metaKeyDown, setMetaKeyDown] = useState<boolean>(false);
   const isMulti = type === 'multi' || type === 'multiModifier';
+  const [rootNodeSelected, setRootNodeSelected] = useState<string>();
 
   const addSelection = useCallback(
     (items: string | string[]) => {
@@ -376,7 +382,7 @@ export const useSelection = ({
         if (!graph) {
           throw new Error('No ref found for the graph canvas.');
         }
-
+        setRootNodeSelected(data.id)
         const { nodes, edges } = getAdjacents(graph, [data.id], pathHoverType);
         setInternalHovers([...nodes, ...edges]);
       }
@@ -456,6 +462,7 @@ export const useSelection = ({
     addSelection,
     removeSelection,
     toggleSelection,
-    setSelections: setInternalSelections
+    setSelections: setInternalSelections,
+    rootNodeSelected: rootNodeSelected
   };
 };

@@ -1,13 +1,20 @@
 import { Graph } from 'ngraph.graph';
 import { Theme } from '../themes';
 
-export type PathSelectionTypes = 'direct' | 'out' | 'in' | 'all';
+export type PathSelectionTypes = 'direct' | 'out' | 'in' | 'all' | 'single';
 
 export function getAdjacents(
   graph: Graph,
   nodeIds: string | string[],
   type: PathSelectionTypes
 ) {
+  if (type === 'single') {
+    return {
+      nodes: Array.isArray(nodeIds) ? nodeIds : [nodeIds],
+      edges: []
+    };
+  }
+
   nodeIds = Array.isArray(nodeIds) ? nodeIds : [nodeIds];
 
   const nodes: string[] = [];

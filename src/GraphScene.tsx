@@ -213,7 +213,7 @@ export interface GraphSceneRef {
 }
 
 export const GraphScene: FC<GraphSceneProps & { ref?: Ref<GraphSceneRef> }> =
-  forwardRef(
+  forwardRef<GraphSceneRef, GraphSceneProps>(
     (
       {
         onNodeClick,

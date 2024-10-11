@@ -9,6 +9,6 @@ export function centralitySizing({
   const ranks = centrality.closeness(graph);
   return {
     ranks,
-    getSizeForNode: (nodeID: string) => ranks[nodeID] * 20
+    getSizeForNode: (nodeID: string) => ranks[nodeID] * 5
   };
 }

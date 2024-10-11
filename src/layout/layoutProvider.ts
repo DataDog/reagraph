@@ -39,7 +39,7 @@ export function layoutProvider({
         nodeStrength: nodeStrength || -250,
         linkDistance: linkDistance || 50,
         clusterPadding: clusterPadding || 10,
-        clusterStrength: clusterStrength || 0.5
+        clusterStrength: clusterStrength || 0.2
       } as ForceDirectedLayoutInputs);
     } else if (type === 'treeTd2d') {
       return forceDirected({
