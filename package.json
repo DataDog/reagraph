@@ -115,7 +115,7 @@
     "react-dom": "^18.2.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "stats.js": "^0.17.0",
-    "storybook": "^7.6.17",
+    "storybook": "^7.6.24",
     "typescript": "^5.3.3",
     "vite": "^5.1.4",
     "vite-plugin-checker": "^0.6.4",
@@ -133,5 +133,108 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "overrides": {
+    "@storybook/addon-docs": {
+      "lodash": "^4.18.1",
+      "cross-spawn": "^7.0.6",
+      "braces": "^3.0.3"
+    },
+    "@storybook/addon-essentials": {
+      "lodash": "^4.18.1",
+      "cross-spawn": "^7.0.6"
+    },
+    "@storybook/react": {
+      "lodash": "^4.18.1",
+      "cross-spawn": "^7.0.6"
+    },
+    "@storybook/react-vite": {
+      "path-to-regexp": ">=0.1.13",
+      "rollup": "^4.62.0",
+      "lodash": "^4.18.1",
+      "cross-spawn": "^7.0.6",
+      "braces": "^3.0.3"
+    },
+    "storybook": {
+      "path-to-regexp": ">=0.1.13",
+      "lodash": "^4.18.1",
+      "cross-spawn": "^7.0.6",
+      "braces": "^3.0.3"
+    },
+    "@eslint/eslintrc": {
+      "minimatch": "^3.1.5"
+    },
+    "@humanwhocodes/config-array": {
+      "minimatch": "^3.1.5"
+    },
+    "@joshwooding/vite-plugin-react-docgen-typescript": {
+      "minimatch": "^3.1.5"
+    },
+    "eslint": {
+      "minimatch": "^3.1.5",
+      "cross-spawn": "^7.0.6"
+    },
+    "eslint-plugin-react": {
+      "minimatch": "^3.1.5"
+    },
+    "jake": {
+      "minimatch": "^3.1.5"
+    },
+    "node-dir": {
+      "minimatch": "^3.1.5"
+    },
+    "puppeteer-core": {
+      "minimatch": "^3.1.5"
+    },
+    "rimraf": {
+      "minimatch": "^3.1.5"
+    },
+    "temp": {
+      "minimatch": "^3.1.5"
+    },
+    "test-exclude": {
+      "minimatch": "^3.1.5"
+    },
+    "vscode-languageclient": {
+      "minimatch": "^3.1.5"
+    },
+    "rollup-plugin-peer-deps-external": {
+      "rollup": "^4.62.0"
+    },
+    "vite": {
+      "rollup": "^4.62.0"
+    },
+    "vite-plugin-dts": {
+      "rollup": "^4.62.0",
+      "lodash": "^4.18.1"
+    },
+    "vite-plugin-svgr": {
+      "rollup": "^4.62.0"
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "braces": "^3.0.3"
+    },
+    "@typescript-eslint/parser": {
+      "braces": "^3.0.3"
+    },
+    "lint-staged": {
+      "cross-spawn": "^7.0.6",
+      "braces": "^3.0.3"
+    },
+    "vite-plugin-checker": {
+      "braces": "^3.0.3"
+    },
+    "@storybook/addon-storysource": {
+      "lodash": "^4.18.1"
+    },
+    "@storybook/addons": {
+      "lodash": "^4.18.1"
+    },
+    "glodrei": {
+      "cross-spawn": "^7.0.6"
+    },
+    "vitest": {
+      "cross-spawn": "^7.0.6"
+    }
   }
 }
