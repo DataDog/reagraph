@@ -115,7 +115,7 @@
     "react-dom": "^18.2.0",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "stats.js": "^0.17.0",
-    "storybook": "^7.6.17",
+    "storybook": "^7.6.24",
     "typescript": "^5.3.3",
     "vite": "^5.1.4",
     "vite-plugin-checker": "^0.6.4",
@@ -133,5 +133,58 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "overrides": {
+    "@storybook/addon-docs": {
+      "lodash": "^4.18.1",
+      "braces": "^3.0.3"
+    },
+    "@storybook/addon-essentials": {
+      "lodash": "^4.18.1"
+    },
+    "@storybook/react": {
+      "lodash": "^4.18.1"
+    },
+    "@storybook/react-vite": {
+      "path-to-regexp": ">=0.1.13",
+      "lodash": "^4.18.1",
+      "braces": "^3.0.3"
+    },
+    "storybook": {
+      "path-to-regexp": ">=0.1.13",
+      "ws": "^8.21.0",
+      "lodash": "^4.18.1",
+      "braces": "^3.0.3"
+    },
+    "jsdom": {
+      "ws": "^8.21.0"
+    },
+    "filelist": {
+      "minimatch": "^5.1.9"
+    },
+    "@storybook/builder-vite": {
+      "rollup": "^3.30.0"
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "braces": "^3.0.3"
+    },
+    "@typescript-eslint/parser": {
+      "braces": "^3.0.3"
+    },
+    "lint-staged": {
+      "braces": "^3.0.3"
+    },
+    "vite-plugin-checker": {
+      "braces": "^3.0.3"
+    },
+    "vite-plugin-dts": {
+      "lodash": "^4.18.1"
+    },
+    "@storybook/addon-storysource": {
+      "lodash": "^4.18.1"
+    },
+    "@storybook/addons": {
+      "lodash": "^4.18.1"
+    }
   }
 }
